@@ -6,7 +6,7 @@ First, you'll need to grab your session cookie from the [Advent of Code site](ht
 
 Then, for each year simply copy the `year0000` folder and rename it, and do the same for each day with `day00`.
 
-Next up is to implement the solution in the `solve.main.kts` file. The inputs (test and real) will be fetched and saved automatically, but you'll need to manually set the expected answer for the tests in the `testAnswerPartX` variables next to the functions.
+Next up is to implement the solution in the `solve.main.kts` file. The real inputs will be fetched and saved automatically, but you'll need to manually set the test inputs and expected outputs in the variables at the top.
 
 Lastly, to run, simply make sure you have Kotlin and Java installed and execute `yearYYYY/dayDD/solve.main.kts`. (At least on *nix; on Windows, you may need to run `kotlin yearYYYY\dayDD\solve.main.kts`, I haven't tested it.)
 
