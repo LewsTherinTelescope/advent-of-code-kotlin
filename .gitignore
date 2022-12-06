@@ -1,3 +1,6 @@
-year*/day*/*.txt
-year*/day*/*/
+.gradle/
+build/
+bin/
+src/year*/day*/*.txt
+src/year*/day*/*/
 .session
