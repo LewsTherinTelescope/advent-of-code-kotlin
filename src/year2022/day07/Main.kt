@@ -4,8 +4,6 @@ import utils.runIt
 import java.util.LinkedList
 
 fun main() = runIt(
-	year = "2022",
-	day = "07",
 	testInput = """
 		$ cd /
 		$ ls

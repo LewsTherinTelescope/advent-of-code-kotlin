@@ -3,8 +3,6 @@ package year2022.day04
 import utils.runIt
 
 fun main() = runIt(
-    year = "2022",
-    day = "04",
     testInput = """
         2-4,6-8
         2-3,4-5
@@ -14,9 +12,9 @@ fun main() = runIt(
         2-6,4-8
     """.trimIndent(),
     ::part1,
-    testAnswerPart1 = null,
+    testAnswerPart1 = 2,
     ::part2,
-    testAnswerPart2 = null,
+    testAnswerPart2 = 4,
 )
 
 fun part1(input: String) = input.toAssignmentPairs().count { (a, b) -> a overlapsFully b }

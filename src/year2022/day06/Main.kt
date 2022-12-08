@@ -3,8 +3,6 @@ package year2022.day06
 import utils.runIt
 
 fun main() = runIt(
-    year = "2022",
-    day = "06",
     testInput = """
         mjqjpqmgbljsphdztnvjfqwrcgsmlb
     """.trimIndent(),

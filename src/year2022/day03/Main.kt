@@ -3,8 +3,6 @@ package year2022.day03
 import utils.runIt
 
 fun main() = runIt(
-    year = "2022",
-    day = "03",
     testInput = """
         vJrwpWtwJgWrhcsFMMfFFhFp
         jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL

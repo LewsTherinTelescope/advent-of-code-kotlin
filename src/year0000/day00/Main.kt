@@ -3,8 +3,6 @@ package year0000.day00
 import utils.runIt
 
 fun main() = runIt(
-    year = "0000",
-    day = "00",
     testInput = """
     """.trimIndent(),
     ::part1,
