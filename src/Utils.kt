@@ -26,7 +26,8 @@ inline fun <One, Two> runIt(
 	part1: (String) -> One,
 	testAnswerPart1: One?,
 	part2: (String) -> Two,
-	testAnswerPart2: Two?
+	testAnswerPart2: Two?,
+	testInputPart2: String = testInput,
 ) {
 	// in my defense, none of this is the most stable or efficient in the first place
 	val (year, day) = StackWalker
@@ -48,7 +49,7 @@ inline fun <One, Two> runIt(
     if (testAnswerPart2 != null) {
         println("-".repeat(80))
         println("Part 2:")
-        val testResult = part2(testInput)
+        val testResult = part2(testInputPart2)
         check(testResult == testAnswerPart2) { "Expected $testAnswerPart2, got $testResult" }
         println(part2(realInput))
     }
