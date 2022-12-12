@@ -73,9 +73,11 @@ inline fun <T, R> List<List<T>>.rotated(
 	acc
 }
 
+@Suppress("NOTHING_TO_INLINE")
 inline infix fun MutableList<MutableList<Crate>>.apply9000(instructions: List<MoveInstruction>) =
 	applyPatches(instructions, preserveOrder = false)
 
+@Suppress("NOTHING_TO_INLINE")
 inline infix fun MutableList<MutableList<Crate>>.apply9001(instructions: List<MoveInstruction>) =
 	applyPatches(instructions, preserveOrder = true)
 
