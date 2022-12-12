@@ -1,19 +1,28 @@
 package utils
 
 import java.math.BigInteger
+import java.math.BigInteger.ZERO as BIGINT_0
 
-val Int.isEven get() = this % 2 == 0
-val Int.isOdd get() = this % 2 != 0
-infix fun Int.isDivisibleBy(divisor: Int): Boolean = this % divisor == 0
-infix fun Int.isDivisibleBy(divisor: Long): Boolean = this % divisor == 0L
+val Int.isEven get() = isDivisibleBy(2)
+val Int.isOdd get() = !isDivisibleBy(2)
+infix fun Int.isDivisibleBy(divisor: Int): Boolean = rem(divisor) == 0
+infix fun Int.isDivisibleBy(divisor: Long): Boolean = rem(divisor) == 0L
 
-val Long.isEven get() = this % 2 == 0L
-val Long.isOdd get() = this % 2 != 0L
-infix fun Long.isDivisibleBy(divisor: Long): Boolean = this % divisor == 0L
-infix fun Long.isDivisibleBy(divisor: Int): Boolean = this % divisor == 0L
+val Long.isEven get() = isDivisibleBy(2)
+val Long.isOdd get() = !isDivisibleBy(2)
+infix fun Long.isDivisibleBy(divisor: Long): Boolean = rem(divisor) == 0L
+infix fun Long.isDivisibleBy(divisor: Int): Boolean = rem(divisor) == 0L
 
-infix fun Float.isDivisibleBy(divisor: Float): Boolean = this % divisor == 0.0F
+infix fun Float.isDivisibleBy(divisor: Float): Boolean = rem(divisor) == 0.0F
 
-infix fun Double.isDivisibleBy(divisor: Double): Boolean = this % divisor == 0.0
+infix fun Double.isDivisibleBy(divisor: Double): Boolean = rem(divisor) == 0.0
 
-infix fun BigInteger.isDivisibleBy(divisor: BigInteger): Boolean = this % divisor == BigInteger.ZERO
+val BIGINT_2 = 2.toBigInteger()
+val BigInteger.isEven get() = isDivisibleBy(BIGINT_2)
+val BigInteger.isOdd get() = !isDivisibleBy(BIGINT_2)
+infix fun BigInteger.isDivisibleBy(divisor: BigInteger): Boolean = rem(divisor) == BIGINT_0
+infix fun BigInteger.isDivisibleBy(divisor: Int): Boolean = rem(bigint(divisor)) == BIGINT_0
+infix fun BigInteger.isDivisibleBy(divisor: Long): Boolean = rem(bigint(divisor)) == BIGINT_0
+
+fun bigint(value: Int): BigInteger = BigInteger.valueOf(value.toLong())
+fun bigint(value: Long): BigInteger = BigInteger.valueOf(value)
