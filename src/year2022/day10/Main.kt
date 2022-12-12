@@ -1,5 +1,6 @@
 package year2022.day10
 
+import utils.isDivisibleBy
 import utils.runIt
 
 fun main() = runIt(
@@ -199,7 +200,7 @@ fun part1A(input: String): Int {
 	val significantStrengths = mutableSetOf<Int>()
 	parseAndExecute(input) { cycle, register ->
 		// every 40, starting at 20
-		if ((cycle + 20) % 40 == 0) significantStrengths += register * cycle
+		if ((cycle + 20) isDivisibleBy 40) significantStrengths += register * cycle
 	}
 	return significantStrengths.sum()
 }
@@ -211,7 +212,7 @@ fun part2A(input: String): String = buildString {
 		// sprite is 3 wide
 		val shouldDrawSprite = column in ((register - 1)..(register + 1))
 		append(if (shouldDrawSprite) "█" else "░")
-		if (cycle % 40 == 0) appendLine()
+		if (cycle isDivisibleBy 40) appendLine()
 	}
 }.trimEnd() // remove trailing newline
 

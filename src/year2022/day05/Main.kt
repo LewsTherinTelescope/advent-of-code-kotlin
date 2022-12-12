@@ -1,6 +1,7 @@
 package year2022.day05
 
 import utils.runIt
+import utils.splitOnBlankLines
 
 fun main() = runIt(
 	testInput = """
@@ -39,7 +40,7 @@ data class MoveInstruction(
 
 operator fun <T> List<T>.component6() = this[5]
 
-fun String.parseMoveInstructions() = split("\n\n").let { (cratesStr, instructionsStr) ->
+fun String.parseMoveInstructions() = splitOnBlankLines().let { (cratesStr, instructionsStr) ->
 	// drop numbers row at end
 	val crates = cratesStr.split("\n")
 		.dropLast(1)

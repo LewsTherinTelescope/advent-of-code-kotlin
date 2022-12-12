@@ -1,6 +1,8 @@
 package year2022.day01
 
 import utils.runIt
+import utils.splitOnBlankLines
+import utils.toIntList
 
 fun main() = runIt(
 	testInput = """
@@ -25,8 +27,8 @@ fun main() = runIt(
 	testAnswerPart2 = 45000,
 )
 
-fun parseInput(input: String) = input.split("\n\n")
-	.map { it.split("\n").map(String::toInt) }
+fun parseInput(input: String) = input.splitOnBlankLines()
+	.map { it.toIntList("\n") }
 
 fun sumInput(input: String) = parseInput(input)
 	.map(Iterable<Int>::sum)
