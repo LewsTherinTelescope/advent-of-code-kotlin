@@ -43,6 +43,7 @@ inline fun <One, Two> runIt(
         println("Part 1:")
         val testResult = part1(testInput)
         check(testResult == testAnswerPart1) { "Expected $testAnswerPart1, got $testResult" }
+		println("Test passed!")
         println(part1(realInput))
     }
 
@@ -51,6 +52,7 @@ inline fun <One, Two> runIt(
         println("Part 2:")
         val testResult = part2(testInputPart2)
         check(testResult == testAnswerPart2) { "Expected $testAnswerPart2, got $testResult" }
+		println("Test passed!")
         println(part2(realInput))
     }
 }
